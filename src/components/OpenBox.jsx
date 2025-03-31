@@ -95,12 +95,12 @@ const OpenBox = () => {
       {/* Boarding Pass */}
       <div
         id="boarding-pass"
-        className="z-10 absolute left-0 transition-transform duration-300 ease-out h-auto top-[120vh]"
+        className="z-10 absolute  transition-transform duration-300 ease-out h-auto top-[120vh]"
         style={{
           opacity: 1,
           transform: `translateX(${Math.min(
             scrollY,
-            window.innerWidth * 0.5 - boardPassWidth / 2
+            window.innerWidth * 0.5 - boardPassWidth * 0.5
           )}px)`,
           transition: "transform 0.3s ease-out",
         }}
