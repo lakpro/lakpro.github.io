@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import flyBetter from "../assets/fly-better.png";
 import emiratesLogo from "../assets/emirates_logo.png";
-import planeImage from "../assets/Plane.png"; // Import plane image
+import planeImage from "../assets/plane.png"; // Import plane image
 import BoardingPass from "./BoardingPass";
 import ClickGif from "../assets/click.gif"; // Import click gif
 
@@ -106,8 +106,13 @@ const OpenBox = () => {
         }}
       >
         {/* <img src={planeImage} alt="Flying Plane" className="w-full h-auto" /> */}
-        <div className="p-10">
+        {/* <div className="p-10">
           <BoardingPass />
+        </div> */}
+        <div className="flex justify-center items-center p-10 w-full">
+          {/* <div className="w-[90%] md:w-[50%] bg-white shadow-lg p-6 text-center"> */}
+          <BoardingPass />
+          {/* </div> */}
         </div>
       </div>
 
