@@ -4,6 +4,7 @@ import emiratesLogo from "../assets/emirates_logo.png";
 import planeImage from "../assets/Plane.png"; // Import plane image
 import BoardingPass from "./BoardingPass";
 import ClickGif from "../assets/click.gif"; // Import click gif
+import { motion } from "framer-motion";
 
 const OpenBox = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -92,29 +93,18 @@ const OpenBox = () => {
         <img src={planeImage} alt="Flying Plane" className="w-full h-auto" />
       </div>
 
-      {/* Boarding Pass */}
-      <div
+      <motion.div
         id="boarding-pass"
-        className="z-10 absolute  transition-transform duration-300 ease-out h-auto top-[120vh]"
-        style={{
-          opacity: 1,
-          transform: `translateX(${Math.min(
-            scrollY,
-            window.innerWidth * 0.5 - boardPassWidth
-          )}px)`,
-          transition: "transform 0.3s ease-out",
+        className="z-10 absolute top-[120vh] w-full flex justify-center items-center p-10"
+        initial={{ x: "-100vw", opacity: 0 }}
+        animate={{
+          x: scrollY > 100 ? 0 : "-100vw",
+          opacity: scrollY > 100 ? 1 : 0,
         }}
+        transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
-        {/* <img src={planeImage} alt="Flying Plane" className="w-full h-auto" /> */}
-        {/* <div className="p-10">
-          <BoardingPass />
-        </div> */}
-        <div className="flex justify-center items-center p-10 w-full">
-          {/* <div className="w-[90%] md:w-[50%] bg-white shadow-lg p-6 text-center"> */}
-          <BoardingPass />
-          {/* </div> */}
-        </div>
-      </div>
+        <BoardingPass />
+      </motion.div>
 
       {/* Curtains */}
       <div className="z-10 relative w-full h-[250vh] md:h-[200vh] flex overflow-hidden">
