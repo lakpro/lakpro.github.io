@@ -21,8 +21,8 @@ const OpenBox = () => {
     };
 
     updateWidth();
-    // window.addEventListener("resize", updateWidth);
-    // return () => window.removeEventListener("resize", updateWidth);
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
   useEffect(() => {
