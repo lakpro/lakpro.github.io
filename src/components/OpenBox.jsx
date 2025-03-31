@@ -100,7 +100,7 @@ const OpenBox = () => {
           opacity: 1,
           transform: `translateX(${Math.min(
             scrollY,
-            window.innerWidth * 0.5 - boardPassWidth * 0.5
+            window.innerWidth * 0.5 - boardPassWidth
           )}px)`,
           transition: "transform 0.3s ease-out",
         }}
