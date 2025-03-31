@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import flyBetter from "../assets/fly-better.png";
 import emiratesLogo from "../assets/emirates_logo.png";
-import planeImage from "../assets/plane.png"; // Import plane image
+import planeImage from "../assets/Plane.png"; // Import plane image
 import BoardingPass from "./BoardingPass";
 import ClickGif from "../assets/click.gif"; // Import click gif
 
