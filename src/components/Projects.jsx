@@ -26,7 +26,7 @@ const projects = [
     id: 3,
     title: "Vulnerability Scanner",
     description:
-      "A Java-based vulnerability detection app that uses an ML model to predict whether an Android app is vulnerable.",
+      "A Java based vulnerability detection app that uses an ML model to predict whether an Android app is vulnerable.",
     image: pj3,
     link: "https://github.com/lakpro/VulnerabilityDetection",
   },
