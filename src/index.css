@@ -4,6 +4,12 @@
   overflow-x: hidden;
 }
 
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "custom-font";
   src: url("./assets/Emirates-Medium.woff") format("woff");
@@ -13,6 +19,7 @@
 
 body {
   background-color: #f6f6f6;
+  box-sizing: border-box;
   /* font-family: "custom-font", sans-serif; */
   /* line-height: 2em; */
   letter-spacing: 0.05em;
