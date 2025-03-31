@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+* {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "custom-font";
+  src: url("./assets/Emirates-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #f6f6f6;
+  /* font-family: "custom-font", sans-serif; */
+  /* line-height: 2em; */
+  letter-spacing: 0.05em;
+}
