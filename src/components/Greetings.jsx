@@ -21,7 +21,7 @@ const Test = () => {
       }, 500); // Match with opacity transition duration
     }, 2000); // Total cycle time
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, []);
 
   return (
