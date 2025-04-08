@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>404 - Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: white;
+        font-family: sans-serif;
+        overflow-x: hidden;
+      }
+
+      .section {
+        width: 100vw;
+        height: 100vh;
+        background-color: #292929;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        text-align: center;
+        z-index: 10;
+        position: relative;
+        padding: 20px;
+      }
+
+      .content h1,
+      .content h4 {
+        transition: transform 0.1s ease-out;
+        margin: 0.5em 0;
+      }
+
+      .gradient-text {
+        font-weight: bold;
+        background: linear-gradient(to right, #f73d3d, #850000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .fly-button {
+        margin-top: 2rem;
+        position: relative;
+        display: inline-block;
+        border-radius: 9999px;
+        overflow: hidden;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .fly-button .outer {
+        position: absolute;
+        inset: -1000%;
+        background: conic-gradient(
+          from 90deg at 50% 50%,
+          #f73d3d 0%,
+          #850000 25%,
+          #f73d3d 50%,
+          #850000 75%,
+          #f73d3d 100%
+        );
+        animation: spin 2s linear infinite;
+        z-index: 0;
+      }
+
+      .fly-button .inner {
+        position: relative;
+        background: #0f0f0f;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 9999px;
+        font-size: 1.1rem;
+        backdrop-filter: blur(20px);
+        z-index: 1;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .content h1 {
+          font-size: 8vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="content">
+        <h1 id="heading1">Looks like you took a wrong turn...</h1>
+        <h4 id="heading2">
+          <span class="gradient-text">
+            OR MAYBE WE MOVED TO ANOTHER DIMENSION 💫
+          </span>
+        </h4>
+        <a href="/" class="fly-button">
+          <span class="outer"></span>
+          <span class="inner">FLY Me Home 🛩️</span>
+        </a>
+      </div>
+    </section>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const heading1 = document.getElementById("heading1");
+        const heading2 = document.getElementById("heading2");
+
+        heading1.style.transform = `translateX(${scrollY * 2}px)`;
+        heading2.style.transform = `translateX(-${scrollY * 2}px)`;
+      });
+    </script>
+  </body>
+</html>
