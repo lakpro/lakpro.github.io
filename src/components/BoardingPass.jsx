@@ -45,7 +45,7 @@ const BoardingPass = () => {
             <div>
               <p className="text-sm text-gray-500">Skills</p>
               <p className="font-semibold">
-                HTML, CSS, JAVASCRIPT, C++, JAVA, PYTHON
+                HTML, CSS, JAVASCRIPT, MERN, C++, JAVA, PYTHON
               </p>
             </div>
             <div className="ml-2 min-w-[80px]">

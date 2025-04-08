@@ -6,8 +6,8 @@ import {
   FaEnvelope,
   FaGoogle,
 } from "react-icons/fa";
-import emiratesLogo from "../assets/emirates_logo.png";
-import flyBetter from "../assets/fly-better.png"; // Import fly better image
+// import emiratesLogo from "../assets/emirates_logo.png";
+// import flyBetter from "../assets/fly-better.png"; // Import fly better image
 
 const Footer = () => {
   const email = "lakshaysetia123@gmail.com"; // Your email
@@ -15,7 +15,7 @@ const Footer = () => {
   const body = "Hello, I would love to ..."; // Default message
 
   return (
-    <footer className="relative bg-[#333333] text-white py-8">
+    <footer className="relative bg-[#292929] text-white py-8">
       {/* <div className="flex items-center justify-center p-0 m-0">
         <img src={flyBetter} alt="Fly Better" className="h-40 opacity-50" />
       </div> */}
@@ -82,9 +82,9 @@ const Footer = () => {
         </div>
       </div>
       {/* </div> */}
-      <div className="hidden md:block absolute bottom-0 right-10 z-30 bg-[#d8131b]">
+      {/* <div className="hidden md:block absolute bottom-0 right-10 z-30 bg-[#d8131b]">
         <img src={emiratesLogo} alt="Fly Better" className="h-30 " />
-      </div>
+      </div> */}
     </footer>
   );
 };

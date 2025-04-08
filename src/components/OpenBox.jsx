@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import flyBetter from "../assets/fly-better.png";
-import emiratesLogo from "../assets/emirates_logo.png";
+// import flyBetter from "../assets/fly-better.png";
+// import emiratesLogo from "../assets/emirates_logo.png";
+import welcome from "../assets/welcome.png";
 import planeImage from "../assets/Plane.png"; // Import plane image
 import BoardingPass from "./BoardingPass";
 import ClickGif from "../assets/click.gif"; // Import click gif
 import { motion } from "framer-motion";
+import Greetings from "./Greetings"; // Import Greetings component
 
 const OpenBox = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -60,22 +62,25 @@ const OpenBox = () => {
 
   return (
     <>
-      {/* Emirates Logo */}
+      {/* Greetings Image */}
       <div className="absolute flex items-center justify-center w-full h-[100vh] z-20">
-        <img
+        {/* <img
           src={emiratesLogo}
           alt="Emirates Logo"
           className="h-1/4 transition-opacity duration-200"
           style={{ opacity: isVisible ? 1 : 0 }}
-        />
+        /> */}
+        <div style={{ opacity: isVisible ? 1 : 0 }}>
+          <Greetings />
+        </div>
       </div>
 
       {/* Fly Better Text */}
       <div className="absolute flex items-center justify-center w-full h-screen pt-40 z-10">
         <img
-          src={flyBetter}
+          src={welcome}
           alt="Fly Better"
-          className="h-1/2 transition-opacity duration-100"
+          className="mix-blend-lighten h-1/4 transition-opacity duration-100"
           style={{ opacity: !isVisible ? 1 - window.scrollY / 1000 : 0 }}
         />
       </div>
@@ -109,11 +114,11 @@ const OpenBox = () => {
       {/* Curtains */}
       <div className="z-10 relative w-full h-[250vh] md:h-[200vh] flex overflow-hidden">
         <div
-          className="bg-[#d8131b] h-[200vh] w-[50vw] transition-transform duration-100"
+          className="bg-[#292929] h-[200vh] w-[50vw] transition-transform duration-100"
           style={{ transform: `translateX(-${translateX * 1.5}px)` }}
         />
         <div
-          className="bg-[#d8131b] h-[200vh] w-[50vw] transition-transform duration-100"
+          className="bg-[#292929] h-[200vh] w-[50vw] transition-transform duration-100"
           style={{ transform: `translateX(${translateX * 1.5}px)` }}
         />
       </div>

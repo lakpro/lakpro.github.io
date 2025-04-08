@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { FaDownload } from "react-icons/fa";
 import resumeFile from "../assets/Lakshay_Setia_Resume.pdf"; // Replace with your resume path
-import planeBottom from "../assets/pbottom.jpg"; // Replace with your plane image path
+import planeBottom from "../assets/pbottom.jpg"; // Replace with your plane image path"; // Replace with your runway image path
+import runway from "../assets/runway.jpg"; // Replace with your runway image path
 
 const ResumeSection = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -16,7 +17,7 @@ const ResumeSection = () => {
     <section
       className="relative flex flex-col items-center justify-center bg-center py-30 px-10 bg-cover"
       style={{
-        backgroundImage: `url(${planeBottom})`,
+        backgroundImage: `url(${runway})`,
         backgroundPosition: `center ${offsetY}px`,
       }}
     >
