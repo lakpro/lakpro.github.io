@@ -9,16 +9,17 @@
       body {
         margin: 0;
         padding: 0;
-        background: #000;
+        background: #000000;
         color: white;
-        font-family: sans-serif;
+        font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont,
+          'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         overflow-x: hidden;
       }
 
       .section {
         width: 100vw;
         height: 100vh;
-        background-color: #292929;
+        background-color: #000000;
         position: relative;
         overflow: hidden;
         display: flex;
@@ -31,12 +32,23 @@
         z-index: 10;
         position: relative;
         padding: 20px;
+        max-width: 90%;
       }
 
-      .content h1,
-      .content h4 {
+      .content h1 {
+        font-size: clamp(2rem, 8vw, 5rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
         transition: transform 0.1s ease-out;
-        margin: 0.5em 0;
+        mix-blend-mode: exclusion;
+        letter-spacing: 0.05em;
+      }
+
+      .content h4 {
+        font-size: clamp(1rem, 4vw, 2rem);
+        font-weight: 700;
+        transition: transform 0.1s ease-out;
+        margin-bottom: 2rem;
       }
 
       .gradient-text {
@@ -54,6 +66,8 @@
         overflow: hidden;
         cursor: pointer;
         text-decoration: none;
+        padding: 4px;
+        max-width: 100%;
       }
 
       .fly-button .outer {
@@ -75,11 +89,22 @@
         position: relative;
         background: #0f0f0f;
         color: white;
-        padding: 12px 24px;
+        padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 5vw, 2.5rem);
         border-radius: 9999px;
-        font-size: 1.1rem;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        font-weight: 600;
         backdrop-filter: blur(20px);
         z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+      }
+
+      .fly-button:hover .inner {
+        background-color: #1a1a1a;
+        box-shadow: 0 0 12px #f73d3d77;
       }
 
       @keyframes spin {
@@ -88,12 +113,6 @@
         }
         100% {
           transform: rotate(360deg);
-        }
-      }
-
-      @media (max-width: 600px) {
-        .content h1 {
-          font-size: 8vw;
         }
       }
     </style>
@@ -105,8 +124,8 @@
         <h1 id="heading1">Looks like you took a wrong turn...</h1>
         <h4 id="heading2">
           <span class="gradient-text">
-            OR MAYBE WE MOVED TO ANOTHER DIMENSION 💫
-          </span>
+            OR MAYBE WE MOVED TO ANOTHER DIMENSION 
+          </span>💫
         </h4>
         <a href="/" class="fly-button">
           <span class="outer"></span>
@@ -118,11 +137,8 @@
     <script>
       window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
-        const heading1 = document.getElementById("heading1");
-        const heading2 = document.getElementById("heading2");
-
-        heading1.style.transform = `translateX(${scrollY * 2}px)`;
-        heading2.style.transform = `translateX(-${scrollY * 2}px)`;
+        document.getElementById("heading1").style.transform = `translateX(${scrollY * 2}px)`;
+        document.getElementById("heading2").style.transform = `translateX(-${scrollY * 2}px)`;
       });
     </script>
   </body>
