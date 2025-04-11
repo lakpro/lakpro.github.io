@@ -3,18 +3,18 @@ import legistifyImg from "../assets/legistify.png";
 import prodNxImg from "../assets/prodnx.png";
 
 export const experiences = [
-  {
-    company: "ProdNx",
-    role: "Developer",
-    duration: "JUL'23 - PRESENT",
-    image: prodNxImg,
-    highlights: [
-      "Launched a cross-browser Chrome extension application using ReactJS.",
-      "Gained 247+ WAU (Weekly Active Users) and over 469 downloads.",
-      "Built a precise time-tracking system in JavaScript for detailed web activity reports.",
-      "Integrated visual tracking system, website blocker, and currently developing an AI chatbot.",
-    ],
-  },
+  // {
+  //   company: "ProdNx",
+  //   role: "Developer",
+  //   duration: "JUL'23 - PRESENT",
+  //   image: prodNxImg,
+  //   highlights: [
+  //     "Launched a cross-browser Chrome extension application using ReactJS.",
+  //     "Gained 247+ WAU (Weekly Active Users) and over 469 downloads.",
+  //     "Built a precise time-tracking system in JavaScript for detailed web activity reports.",
+  //     "Integrated visual tracking system, website blocker, and currently developing an AI chatbot.",
+  //   ],
+  // },
 
   {
     company: "Legistify",
