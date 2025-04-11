@@ -12,16 +12,24 @@ const Test = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(false); // Start fade out
+    let timeoutId;
 
-      setTimeout(() => {
+    const animate = () => {
+      setIsVisible(false); // start fade out
+
+      timeoutId = setTimeout(() => {
+        // update image index
         setIndex((prev) => (prev + 1) % imageList.length);
-        setIsVisible(true); // Fade in new image
-      }, 500); // Match with opacity transition duration
-    }, 2000); // Total cycle time
+        setIsVisible(true); // fade in new image
 
-    // return () => clearInterval(interval);
+        // recursively call to continue the loop
+        timeoutId = setTimeout(animate, 2000); // total time for visible + transition
+      }, 500); // match fade-out duration
+    };
+
+    animate(); // start animation
+
+    return () => clearTimeout(timeoutId); // cleanup on unmount
   }, []);
 
   return (
@@ -29,10 +37,9 @@ const Test = () => {
       <img
         src={imageList[index]}
         alt="Greeting"
-        className={`mix-blend-lighten max-h-[80vh] max-w-[90vw] transition-opacity duration-700 ease-in-out ${
+        className={`mix-blend-lighten max-h-[80vh] max-w-[90vw] transition-opacity duration-500 ease-in-out ${
           isVisible ? "opacity-100" : "opacity-0"
-        }
-       `}
+        }`}
       />
     </div>
   );
