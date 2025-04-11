@@ -1,3 +1,4 @@
+// import { set } from "mongoose";
 import React, { useEffect, useState } from "react";
 
 // Auto-import all image files from greetings folder
@@ -12,24 +13,21 @@ const Test = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    let timeoutId;
+    let index = 0;
 
-    const animate = () => {
-      setIsVisible(false); // start fade out
+    const intervalId = setInterval(() => {
+      setIsVisible(false); // fade out
 
-      timeoutId = setTimeout(() => {
-        // update image index
-        setIndex((prev) => (prev + 1) % imageList.length);
-        setIsVisible(true); // fade in new image
+      setTimeout(() => {
+        index = (index + 1) % imageList.length;
+        setIndex(index);
+        setIsVisible(true); // fade in
+      }, 500); // fade-out duration
+    }, 2000); // interval = total time for visible + transition
 
-        // recursively call to continue the loop
-        timeoutId = setTimeout(animate, 2000); // total time for visible + transition
-      }, 500); // match fade-out duration
+    return () => {
+      clearInterval(intervalId);
     };
-
-    animate(); // start animation
-
-    return () => clearTimeout(timeoutId); // cleanup on unmount
   }, []);
 
   return (
