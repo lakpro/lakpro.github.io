@@ -18,11 +18,11 @@ const Test = () => {
     const intervalId = setInterval(() => {
       setIsVisible(false); // fade out
 
-      setTimeout(() => {
-        index = (index + 1) % imageList.length;
-        setIndex(index);
-        setIsVisible(true); // fade in
-      }, 500); // fade-out duration
+      // setTimeout(() => {
+      index = (index + 1) % imageList.length;
+      setIndex(index);
+      setIsVisible(true); // fade in
+      // }, 500); // fade-out duration
     }, 2000); // interval = total time for visible + transition
 
     return () => {
