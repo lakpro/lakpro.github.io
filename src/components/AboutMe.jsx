@@ -11,7 +11,7 @@ const AboutMe = () => {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="absolute top-0 left-0 w-full h-[75px] md:h-[150px] " />
-      <h2 className="text-4xl font-bold pb-3">About Me</h2>
+      <h2 className="text-4xl font-bold pb-3">Above the Clouds</h2>
       <p className="text-gray-600 mb-8 text-center">
         I HAVE A LIFE OUTSIDE CODING AS WELL!
       </p>

@@ -27,7 +27,7 @@ const ResumeSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-white text-center">
-        <h2 className="text-4xl font-bold mb-4 p-1">Unlock My Journey</h2>
+        <h2 className="text-4xl font-bold mb-4 p-1">Pilot's Log</h2>
         <p className="mb-6 text-lg opacity-90">
           GRAB MY RESUME AND EXPLORE MY SKILLS, EXPERIENCE, AND PROJECTS IN ONE
           CLICK!{" "}

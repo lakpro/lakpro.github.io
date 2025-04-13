@@ -13,7 +13,7 @@ const BoardingPass = () => {
         <dic className="w-5 bg-[#d8131b] h-full" />
         <img src={emiratesLogo} alt="Emirates Logo" className="h-full" />
         <dic className="w-5 bg-[#d8131b] h-full" />
-        <span className="text-xl font-bold mx-6">Boarding Pass</span>
+        <span className="text-xl font-bold mx-6">DevPass</span>
       </div>
 
       <div className="flex flex-col md:flex-row">
@@ -29,7 +29,7 @@ const BoardingPass = () => {
             </div>
             <div>
               <p className="text-sm text-gray-500">Destination</p>
-              <p className="font-semibold">DXB</p>
+              <p className="font-semibold">SFO</p>
             </div>
             <div>
               <p className="text-sm text-gray-500">Tech Stack</p>
@@ -43,7 +43,7 @@ const BoardingPass = () => {
 
           <div className="mt-6 flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-500">Skills</p>
+              <p className="text-sm text-gray-500">Loadout</p>
               <p className="font-semibold">
                 HTML, CSS, JAVASCRIPT, MERN, C++, JAVA, PYTHON
               </p>

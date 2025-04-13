@@ -11,7 +11,7 @@ const projects = [
     id: 1,
     title: "ProdNx",
     description:
-      "Chrome extension to track time, block distractions, build habits, and boost focus. (AI chatbot coming soon)",
+      "Chrome extension to track time, block distractions, build habits, and boost focus with 237+ active users. (AI chatbot coming soon)",
     image: pj1,
     link: "https://prodnx.com/",
   },
@@ -28,7 +28,7 @@ const projects = [
     id: 3,
     title: "Vulnerability Scanner",
     description:
-      "Java-based tool using machine learning to predict vulnerabilities in Android apps.",
+      "Java based android app using machine learning to predict vulnerabilities in play store apps.",
     image: pj3,
     link: "https://github.com/lakpro/VulnerabilityDetection",
   },
@@ -36,7 +36,7 @@ const projects = [
     id: 2,
     title: "Series Verse",
     description:
-      "Full-stack MERN app for exploring web series with OAuth login, search, favorites, and release alerts.",
+      "Full-stack MERN app for exploring web series with OAuth login, search, favorites, and next episode alerts.",
     image: pj2,
     link: "https://series-verse-lakpro.netlify.app/",
   },
@@ -64,7 +64,7 @@ const Projects = () => {
   return (
     <>
       <section className="py-30 text-center flex flex-col justify-center items-center px-10 bg-gradient-to-b from-transparent to-[#fff]">
-        <h2 className="text-4xl font-bold pb-3">Something I Built!</h2>
+        <h2 className="text-4xl font-bold pb-3">Portfolio Terminal</h2>
         <p className="text-gray-600 mb-14">
           NOTHING SHOWCASES SKILLS BETTER THAN REAL-WORLD PROJECTS
         </p>

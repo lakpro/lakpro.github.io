@@ -35,7 +35,7 @@ import React from "react";
 const Experience = () => {
   return (
     <section className="flex flex-col justify-center items-center pt-30 pb-20 px-6">
-      <h2 className="text-4xl font-bold pb-3">Experience</h2>
+      <h2 className="text-4xl font-bold pb-3">Flight History</h2>
       <p className="text-gray-600 mb-14 text-center">
         I'VE STEPPED INTO THE REAL WORLD AND MADE AN IMPACT!
       </p>

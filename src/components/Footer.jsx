@@ -6,13 +6,15 @@ import {
   FaEnvelope,
   FaGoogle,
 } from "react-icons/fa";
+import { LuTowerControl } from "react-icons/lu";
+
 // import emiratesLogo from "../assets/emirates_logo.png";
 // import flyBetter from "../assets/fly-better.png"; // Import fly better image
 
 const Footer = () => {
   const email = "lakshaysetia123@gmail.com"; // Your email
-  const subject = "Inquiry"; // Default subject
-  const body = "Hello, I would love to ..."; // Default message
+  const subject = "Query regarding ..."; // Default subject
+  const body = "Hello, I am ... %0AI wanted to ..."; // Default message
 
   return (
     <footer className="relative bg-[#292929] text-white py-8">
@@ -22,7 +24,11 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col items-center space-y-4 text-xl font-bold">
         {/* Logo */}
         {/* <img src={flyBetter} alt="Fly Better" className="h-12" /> */}
-        Connect with me
+        <span className="flex items-center ">
+          <LuTowerControl className="inline text-2xl mr-1" />
+          Control Tower{" "}
+          {/* <LuTowerControl className="inline text-2xl ml-1" /> */}
+        </span>
         {/* Social Icons */}
         <div className="flex space-x-6 text-2xl mt-4">
           {/* <a
