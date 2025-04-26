@@ -10,10 +10,12 @@ import Experience from "./components/Experience";
 import AboutMe from "./components/AboutMe";
 import Form from "./components/form";
 import Test from "./components/Greetings";
+import Analytics from "./components/Analtyics";
 
 function App() {
   return (
     <>
+      <Analytics />
       {/* <Test /> */}
       {/* <Form /> */}
       <OpenBox />
