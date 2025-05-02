@@ -11,6 +11,7 @@ import AboutMe from "./components/AboutMe";
 import Form from "./components/form";
 import Test from "./components/Greetings";
 import Analytics from "./components/Analtyics";
+import Achievements from "./components/Achievements";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Resume />
       <Experience />
       <Projects />
+      <Achievements />
       <AboutMe />
       {/* <Main /> */}
       <Footer />

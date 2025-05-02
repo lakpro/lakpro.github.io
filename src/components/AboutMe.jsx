@@ -7,7 +7,7 @@ import bg from "../assets/bg.avif";
 const AboutMe = () => {
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center items-center py-10 px-6 overflow-hidden bg-cover bg-center"
+      className="relative min-h-screen flex flex-col justify-center items-center py-10 px-6 overflow-hidden bg-cover bg-center pt-20"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="absolute top-0 left-0 w-full h-[75px] md:h-[150px] " />

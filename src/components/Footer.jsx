@@ -86,6 +86,16 @@ const Footer = () => {
             {/* <span>Email Me</span> */}
           </a>
         </div>
+        <div className="text-center font-light mt-4 text-sm text-gray-400">
+          &copy; {new Date().getFullYear()}{" "}
+          <a
+            href="https://linkedin.com/in/lakshay-setia"
+            className="hover:underline"
+          >
+            Lakshay Setia
+          </a>
+          . All rights reserved.
+        </div>
       </div>
       {/* </div> */}
       {/* <div className="hidden md:block absolute bottom-0 right-10 z-30 bg-[#d8131b]">

@@ -3,30 +3,30 @@ import legistifyImg from "../assets/legistify.png";
 import prodNxImg from "../assets/prodnx.png";
 
 export const experiences = [
-  // {
-  //   company: "ProdNx",
-  //   role: "Developer",
-  //   duration: "JUL'23 - PRESENT",
-  //   image: prodNxImg,
-  //   highlights: [
-  //     "Launched a cross-browser Chrome extension application using ReactJS.",
-  //     "Gained 247+ WAU (Weekly Active Users) and over 469 downloads.",
-  //     "Built a precise time-tracking system in JavaScript for detailed web activity reports.",
-  //     "Integrated visual tracking system, website blocker, and currently developing an AI chatbot.",
-  //   ],
-  // },
-
+  {
+    company: "ProdNx",
+    role: "Developer",
+    duration: "JUL'23 - PRESENT",
+    image: prodNxImg,
+    highlights: [
+      "Developed cross-browser Chrome extension.",
+      "Achieved 237+ WAU and 469+ downloads.",
+      "Built precise JS time-tracking for web activity reports.",
+      "Integrated visual tracking, website blocker; developing AI chatbot.",
+    ],
+  },
   {
     company: "Legistify",
     role: "Fullstack Intern",
     duration: "JAN'24 - JUL'24",
     image: legistifyImg,
     highlights: [
-      "Led integration of external frontend components and developed multiple backend APIs.",
-      "Fixed critical bugs, improving system reliability metrics by 30%.",
-      "Integrated a new editor for on-prem migration, reducing hosting costs by 40%.",
+      "Led frontend component integration; developed 15+ backend APIs.",
+      "Fixed 9+ critical bugs, improving system reliability by 30%.",
+      "Integrated new editor for on-prem migration; reduced hosting costs by 40%.",
     ],
   },
+
   // Add more experiences here as needed
 ];
 
@@ -43,7 +43,7 @@ const Experience = () => {
       {experiences.map((exp, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row items-center bg-white shadow-xl rounded-lg p-4  max-w-4xl text-center mb-10"
+          className="flex flex-col md:flex-row items-center bg-white shadow-xl rounded-lg p-4  w-4xl text-center mb-10"
         >
           <div className="p-4 mb-5 md:mb-0 md:w-1/4 min-w-[220px]">
             <img

@@ -5,6 +5,7 @@ import pj3 from "../assets/pj3.png";
 import pj4 from "../assets/pj4.png";
 import pj5 from "../assets/pj5.png";
 import pj6 from "../assets/pj6.png";
+import airplaneWindow from "../assets/airplaneWindow.png"; // Airplane window overlay image
 
 const projects = [
   {
@@ -63,7 +64,7 @@ const Projects = () => {
 
   return (
     <>
-      <section className="py-30 text-center flex flex-col justify-center items-center px-10 bg-gradient-to-b from-transparent to-[#fff]">
+      <section className="py-30 text-center flex flex-col justify-center items-center px-10 pb-10">
         <h2 className="text-4xl font-bold pb-3">Portfolio Terminal</h2>
         <p className="text-gray-600 mb-14">
           NOTHING SHOWCASES SKILLS BETTER THAN REAL-WORLD PROJECTS
@@ -82,11 +83,27 @@ const Projects = () => {
                 className="flex flex-col items-center w-60"
               >
                 {/* Circular Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-40 h-40 object-cover rounded-full m-3 hover:border-3 hover:border-gray-300 shadow-2xl transition-transform duration-300 hover:scale-115"
-                />
+                <div className="relative w-60 h-60 m-3 overflow-hidden transition-transform duration-300 hover:scale-105 p-2 transition-all duration-300 group">
+                  {/* Overlay */}
+                  {/* <div
+                    className={`hidden md-visible absolute inset-0 bg-[#c4c6c7] bg-opacity-50 transition-transform duration-500 translate-y-0 group-hover:translate-y-[-100%]`}
+                  ></div> */}
+                  {/* Image */}
+
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="object-cover h-full w-full"
+                  />
+
+                  {/* Airplane Window Overlay */}
+                  <img
+                    src={airplaneWindow} // replace with your overlay image
+                    alt="Airplane Window Frame"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+
                 {/* Title */}
                 <h3 className="mt-4 text-lg font-semibold text-gray-800 ">
                   {project.title}
