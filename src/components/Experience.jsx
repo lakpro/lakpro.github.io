@@ -43,7 +43,7 @@ const Experience = () => {
       {experiences.map((exp, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row items-center bg-white shadow-xl rounded-lg p-4  w-4xl text-center mb-10"
+          className="flex flex-col md:flex-row items-center bg-white shadow-xl rounded-lg p-4 max-w-4xl  md:w-4xl text-center mb-10"
         >
           <div className="p-4 mb-5 md:mb-0 md:w-1/4 min-w-[220px]">
             <img
