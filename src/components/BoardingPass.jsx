@@ -37,19 +37,22 @@ const BoardingPass = () => {
             </div>
             <div>
               <p className="text-sm text-gray-500">Experience</p>
-              <p className="font-semibold">6+ Months</p>
+              <p className="font-semibold">2+ Yrs</p>
             </div>
           </div>
 
-          <div className="mt-6 flex items-center justify-between">
+          <div className="pt-6 pb-1 flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-500">Loadout</p>
               <p className="font-semibold">
-                HTML, CSS, JAVASCRIPT, TYPESCRIPT, C++, JAVA, PYTHON
+                AGENTIC AI, TYPESCRIPT, JAVASCRIPT, REACT, NODE, JAVA, PYTHON,
+                MONGODB, SQL, C++, HTML, CSS
               </p>
             </div>
-            <div className="ml-2 min-w-[80px]">
-              <QRCodeCanvas value={portfolioURL} size={80} />
+            <div className="ml-2 min-w-[80px] cursor-pointer hover:shadow-md hover:scale-110 mr-2">
+              <a href={portfolioURL} target="_blank" rel="noopener noreferrer">
+                <QRCodeCanvas value={portfolioURL} size={80} />
+              </a>
             </div>
           </div>
         </div>

@@ -5,9 +5,18 @@ import pj3 from "../assets/pj3.png";
 import pj4 from "../assets/pj4.png";
 import pj5 from "../assets/pj5.png";
 import pj6 from "../assets/pj6.png";
+import pj7 from "../assets/pj7.jpeg";
 import airplaneWindow from "../assets/airplaneWindow.png"; // Airplane window overlay image
 
 const projects = [
+  {
+    id: 7,
+    title: "Agentic AI",
+    description:
+      "Developed an AI-powered virtual assistant, leveraging an agentic architecture with human in the loop supervision and automated learning capabilities.",
+    image: pj7,
+    link: "https://github.com/lakpro/agenticAI",
+  },
   {
     id: 1,
     title: "ProdNx",
@@ -49,14 +58,14 @@ const projects = [
     image: pj4,
     link: "https://github.com/lakpro/bear-n-bull",
   },
-  {
-    id: 5,
-    title: "Weather Station",
-    description:
-      "React and Node.js app offering live weather updates via the OpenWeatherMap API.",
-    image: pj5,
-    link: "https://weather-app-lakpro.netlify.app/",
-  },
+  // {
+  //   id: 5,
+  //   title: "Weather Station",
+  //   description:
+  //     "React and Node.js app offering live weather updates via the OpenWeatherMap API.",
+  //   image: pj5,
+  //   link: "https://weather-app-lakpro.netlify.app/",
+  // },
 ];
 
 const Projects = () => {
@@ -109,7 +118,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 {/* Description */}
-                <p className="text-gray-600 text-sm text-justify min-h-[96px]">
+                <p className="text-gray-600 text-sm text-justify min-h-[100px]">
                   {project.description}
                 </p>
               </a>

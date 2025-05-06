@@ -100,7 +100,7 @@ const OpenBox = () => {
 
       <motion.div
         id="boarding-pass"
-        className="z-10 absolute top-[120vh] w-full flex justify-center items-center p-10"
+        className="z-20 absolute top-[120vh] w-full flex justify-center items-center p-10"
         initial={{ x: "-100vw", opacity: 0 }}
         animate={{
           x: scrollY > 100 ? 0 : "-100vw",
