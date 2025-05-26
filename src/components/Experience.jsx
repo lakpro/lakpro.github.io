@@ -6,7 +6,7 @@ export const experiences = [
   {
     company: "ProdNx",
     role: "Developer",
-    duration: "JUL'23 - PRESENT",
+    duration: "MAY'23 - PRESENT",
     image: prodNxImg,
     highlights: [
       "Developed cross-browser Chrome extension.",

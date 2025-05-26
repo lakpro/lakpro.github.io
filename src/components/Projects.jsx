@@ -31,7 +31,8 @@ const projects = [
     description:
       "React and Node.js app with Instagram OAuth, feed access, manual replies, and AI/webhook based automation-ready setup.",
     image: pj6,
-    link: "https://insta-api-login.netlify.app/",
+    link: "https://github.com/lakpro/instaApiLoginBackend",
+    // link: "https://insta-api-login.netlify.app/",
   },
 
   {
@@ -75,8 +76,11 @@ const Projects = () => {
     <>
       <section className="py-30 text-center flex flex-col justify-center items-center px-10 pb-10">
         <h2 className="text-4xl font-bold pb-3">Portfolio Terminal</h2>
-        <p className="text-gray-600 mb-14">
+        <p className="text-gray-600 pb-2">
           NOTHING SHOWCASES SKILLS BETTER THAN REAL-WORLD PROJECTS
+        </p>
+        <p className="text-gray-400 mb-14 font-light font-[cursive]">
+          Gently tap the cabin window to open!
         </p>
 
         {/* Project Cards */}
