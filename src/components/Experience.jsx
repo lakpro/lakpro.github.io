@@ -1,12 +1,26 @@
 // experiencesData.js
 import legistifyImg from "../assets/legistify.png";
 import prodNxImg from "../assets/prodnx.png";
+import eclipseImg from "../assets/eclipse360.png";
 
 export const experiences = [
+   {
+    company: "Eclipse360",
+    role: "Fullstack Developer",
+    duration: "JUN'25 - PRESENT",
+    image: exlipseImg,
+    highlights: [
+      "Contributed to building a pixel-perfect rooftop solar design software.",
+      "Led development of Design and Lead Management modules for the solar CRM.",
+      "Implemented critical features such as Auto-Save, Multiple Map Imageries, and Meter-to-Pixel integration.",
+      "Drove end-to-end delivery of the Project Management module, enhancing workflow efficiency.",
+      "Ensured scalability, performance, and seamless cross-module integration across the platform.",
+    ],
+  },
   {
     company: "ProdNx",
     role: "Developer",
-    duration: "MAY'23 - PRESENT",
+    duration: "MAY'23 - JUN'25",
     image: prodNxImg,
     highlights: [
       "Developed cross-browser Chrome extension.",
