@@ -8,7 +8,7 @@ export const experiences = [
     company: "Eclipse360",
     role: "Fullstack Developer",
     duration: "JUN'25 - PRESENT",
-    image: exlipseImg,
+    image: eclipseImg,
     highlights: [
       "Contributed to building a pixel-perfect rooftop solar design software.",
       "Led development of Design and Lead Management modules for the solar CRM.",
@@ -63,7 +63,7 @@ const Experience = () => {
             <img
               src={exp.image}
               alt={exp.company}
-              className="object-cover rounded-lg w-50 h-50"
+              className="object-cover rounded-lg max-w-50 max-h-50"
             />
           </div>
           <div className="flex flex-col items-start justify-center pl-6 md:w-3/4">
