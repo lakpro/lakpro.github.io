@@ -10,11 +10,10 @@ export const experiences = [
     duration: "JUN'25 - PRESENT",
     image: eclipseImg,
     highlights: [
-      "Contributed to building a pixel-perfect rooftop solar design software.",
-      "Led development of Design and Lead Management modules for the solar CRM.",
-      "Implemented critical features such as Auto-Save, Multiple Map Imageries, and Meter-to-Pixel integration.",
-      "Drove end-to-end delivery of the Project Management module, enhancing workflow efficiency.",
-      "Ensured scalability, performance, and seamless cross-module integration across the platform.",
+      `Contributed to building a pixel-perfect <b>rooftop solar design</b> software.`,
+      "Led development of Design and Lead Management modules for the <b>solar CRM</b>.",
+      "Implemented critical features such as Auto-Save, Multiple Map Imagery, and Meter-to-Pixel integration.",
+      "Drove <b>end-to-end</b> delivery of the Project Management module, enhancing workflow efficiency.",
     ],
   },
   {
@@ -23,10 +22,10 @@ export const experiences = [
     duration: "MAY'23 - JUN'25",
     image: prodNxImg,
     highlights: [
-      "Developed cross-browser Chrome extension.",
-      "Achieved 237+ WAU and 469+ downloads.",
-      "Built precise JS time-tracking for web activity reports.",
-      "Integrated visual tracking, website blocker; developing AI chatbot.",
+      "Developed a cross-browser <b>Chrome extension</b> application using React.",
+      "Reached <b>250+ WAU</b> (Weekly Active Users) and <b>677+ downloads</b>.",
+      "Built a precise <b>time-tracking</b> system, website blocker in JavaScript for detailed web activity reports.",
+      "Optimized data operations, implemented unit testing and added support for <b>20+ languages</b>.",
     ],
   },
   {
@@ -36,8 +35,8 @@ export const experiences = [
     image: legistifyImg,
     highlights: [
       "Led frontend component integration; developed 15+ backend APIs.",
-      "Fixed 9+ critical bugs, improving system reliability by 30%.",
-      "Integrated new editor for on-prem migration; reduced hosting costs by 40%.",
+      "Fixed 9+ critical bugs, <b>improving system reliability by 30%</b>.",
+      "Integrated new editor for on-prem migration; <b>reduced hosting costs by 40%</b>.",
     ],
   },
 
@@ -75,7 +74,7 @@ const Experience = () => {
             </p>
             <ul className="list-disc list-inside text-gray-700 space-y-2 text-left">
               {exp.highlights.map((point, i) => (
-                <li key={i}>{point}</li>
+                <li key={i} dangerouslySetInnerHTML={{ __html: point }} />
               ))}
             </ul>
           </div>
