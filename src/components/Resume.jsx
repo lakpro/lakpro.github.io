@@ -20,10 +20,10 @@ const ResumeSection = () => {
         backgroundPosition: `center ${offsetY}px`,
       }}
     >
-      {/* Light cockpit-tinted overlay */}
+      {/* Cockpit-tinted overlay */}
       <div
         className="absolute inset-0"
-        style={{ background: "rgba(240, 236, 228, 0.82)" }}
+        style={{ background: "var(--cp-overlay)" }}
       />
       {/* Subtle panel scanlines */}
       <div
@@ -33,33 +33,33 @@ const ResumeSection = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-2xl">
+      <div className="relative z-10 w-full max-w-4xl">
         {/* Section plate */}
         <div className="flex items-center gap-3 mb-6">
           <div
             className="px-2 py-0.5 text-xs tracking-[0.3em] uppercase"
             style={{
               fontFamily: "'B612 Mono', monospace",
-              background: "#D0CCC4",
-              border: "1px solid #B8B4AC",
-              color: "#5C5850",
+              background: "var(--cp-panel-dark)",
+              border: "1px solid var(--cp-seam)",
+              color: "var(--cp-muted)",
             }}
           >
             SYS · DOC · 01
           </div>
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, #9A9690, #F4F0E8)" }} />
+          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, var(--cp-seam-dark), var(--cp-raised))" }} />
           <span className="cp-light cp-light-green" />
         </div>
 
         <h2
           className="text-4xl font-bold tracking-widest uppercase mb-2"
-          style={{ fontFamily: "'B612 Mono', monospace", color: "#1A1A18" }}
+          style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-text)" }}
         >
           Pilot&apos;s Log
         </h2>
         <p
           className="text-xs tracking-[0.3em] uppercase mb-8"
-          style={{ fontFamily: "'B612 Mono', monospace", color: "#5C5850" }}
+          style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-muted)" }}
         >
           Grab my resume — skills, experience, and projects in one click
         </p>
@@ -79,9 +79,9 @@ const ResumeSection = () => {
         <div
           className="mt-8 flex flex-wrap gap-6 p-4"
           style={{
-            background: "#E4E0D8",
-            border: "1px solid #B8B4AC",
-            boxShadow: "inset 2px 2px 0 #F4F0E8, inset -1px -1px 0 #9A9690",
+            background: "var(--cp-panel)",
+            border: "1px solid var(--cp-seam)",
+            boxShadow: "inset 2px 2px 0 var(--cp-raised), inset -1px -1px 0 var(--cp-seam-dark)",
           }}
         >
           {[

@@ -8,14 +8,13 @@ const PanelCard = ({ label, title, img, statusColor = "#27A020" }) => (
   <div
     className="flex flex-col overflow-hidden flex-1"
     style={{
-      background: "#E4E0D8",
-      border: "2px solid #B8B4AC",
-      // boxShadow: "inset 2px 2px 0 #F4F0E8, inset -1px -1px 0 #9A9690",
+      background: "var(--cp-panel)",
+      border: "2px solid var(--cp-seam)",
     }}
   >
     <div
       className="flex items-center gap-2 px-3 py-2"
-      style={{ background: "#D0CCC4", borderBottom: "1px solid #B8B4AC" }}
+      style={{ background: "var(--cp-panel-dark)", borderBottom: "1px solid var(--cp-seam)" }}
     >
       <div
         className="w-1.5 h-1.5 rounded-full"
@@ -23,7 +22,7 @@ const PanelCard = ({ label, title, img, statusColor = "#27A020" }) => (
       />
       <span
         className="text-[10px] tracking-[0.25em] uppercase"
-        style={{ fontFamily: "'B612 Mono', monospace", color: "#5C5850" }}
+        style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-muted)" }}
       >
         {label}
       </span>
@@ -31,7 +30,7 @@ const PanelCard = ({ label, title, img, statusColor = "#27A020" }) => (
     <div className="px-4 pt-3 pb-2">
       <h3
         className="text-2xl font-bold tracking-wider uppercase"
-        style={{ fontFamily: "'B612 Mono', monospace", color: "#1A1A18" }}
+        style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-text)" }}
       >
         {title}
       </h3>
@@ -45,7 +44,7 @@ const PanelCard = ({ label, title, img, statusColor = "#27A020" }) => (
       />
       <div
         className="absolute top-0 left-0 w-full h-16 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, #E4E0D8, transparent)" }}
+        style={{ background: "linear-gradient(to bottom, var(--cp-panel), transparent)" }}
       />
     </div>
   </div>
@@ -57,7 +56,7 @@ const AboutMe = () => {
       className="relative min-h-screen flex flex-col justify-center items-center py-16 px-6 overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="absolute inset-0" style={{ background: "rgba(240,236,228,0.88)" }} />
+      <div className="absolute inset-0" style={{ background: "var(--cp-overlay)" }} />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -72,24 +71,24 @@ const AboutMe = () => {
             className="px-2 py-0.5 text-xs tracking-[0.3em] uppercase"
             style={{
               fontFamily: "'B612 Mono', monospace",
-              background: "#D0CCC4",
-              border: "1px solid #B8B4AC",
-              color: "#5C5850",
+              background: "var(--cp-panel-dark)",
+              border: "1px solid var(--cp-seam)",
+              color: "var(--cp-muted)",
             }}
           >
             SYS · CAM · 05
           </div>
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, #9A9690, transparent)" }} />
+          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, var(--cp-seam-dark), transparent)" }} />
         </div>
         <h2
           className="text-4xl font-bold tracking-widest uppercase pb-2"
-          style={{ fontFamily: "'B612 Mono', monospace", color: "#1A1A18" }}
+          style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-text)" }}
         >
           Above the Clouds
         </h2>
         <p
           className="text-xs tracking-[0.25em] uppercase mb-10"
-          style={{ fontFamily: "'B612 Mono', monospace", color: "#5C5850" }}
+          style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-muted)" }}
         >
           Life outside the cockpit — personal log
         </p>
