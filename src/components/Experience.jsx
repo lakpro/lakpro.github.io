@@ -19,7 +19,7 @@ export const experiences = [
   {
     company: "ProdNx",
     role: "Developer",
-    duration: "MAY'23 - JUN'25",
+    duration: "JUL'24 - JUN'25",
     image: prodNxImg,
     highlights: [
       "Developed a cross-browser <b>Chrome extension</b> application using React.",
