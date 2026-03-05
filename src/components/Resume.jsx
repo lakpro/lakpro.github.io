@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaDownload } from "react-icons/fa";
-import resumeFile from "../assets/Lakshay_Setia_Resume.pdf"; // Replace with your resume path
-import planeBottom from "../assets/pbottom.jpg"; // Replace with your plane image path"; // Replace with your runway image path
-import runway from "../assets/runway.jpg"; // Replace with your runway image path
+import resumeFile from "../assets/Lakshay_Setia_Resume.pdf";
+import runway from "../assets/runway.jpg";
 
 const ResumeSection = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -15,32 +14,88 @@ const ResumeSection = () => {
 
   return (
     <section
-      className="relative flex flex-col items-center justify-center bg-center py-30 px-10 bg-cover backdrop-blur-lg"
+      className="relative flex flex-col items-center justify-center py-28 px-10 bg-cover"
       style={{
         backgroundImage: `url(${runway})`,
         backgroundPosition: `center ${offsetY}px`,
       }}
     >
-      {/* Parallax Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
-      <div className="backdrop-blur-[4px]  w-full h-full absolute top-0 left-0 z-0" />
+      {/* Light cockpit-tinted overlay */}
+      <div
+        className="absolute inset-0"
+        style={{ background: "rgba(240, 236, 228, 0.82)" }}
+      />
+      {/* Subtle panel scanlines */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.025) 3px, rgba(0,0,0,0.025) 4px)",
+        }}
+      />
 
-      {/* Content */}
-      <div className="relative z-10 text-white text-center">
-        <h2 className="text-4xl font-bold mb-4 p-1">Pilot's Log</h2>
-        <p className="mb-6 text-lg opacity-90">
-          GRAB MY RESUME AND EXPLORE MY SKILLS, EXPERIENCE, AND PROJECTS IN ONE
-          CLICK!{" "}
+      <div className="relative z-10 w-full max-w-2xl">
+        {/* Section plate */}
+        <div className="flex items-center gap-3 mb-6">
+          <div
+            className="px-2 py-0.5 text-xs tracking-[0.3em] uppercase"
+            style={{
+              fontFamily: "'B612 Mono', monospace",
+              background: "#D0CCC4",
+              border: "1px solid #B8B4AC",
+              color: "#5C5850",
+            }}
+          >
+            SYS · DOC · 01
+          </div>
+          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, #9A9690, #F4F0E8)" }} />
+          <span className="cp-light cp-light-green" />
+        </div>
+
+        <h2
+          className="text-4xl font-bold tracking-widest uppercase mb-2"
+          style={{ fontFamily: "'B612 Mono', monospace", color: "#1A1A18" }}
+        >
+          Pilot&apos;s Log
+        </h2>
+        <p
+          className="text-xs tracking-[0.3em] uppercase mb-8"
+          style={{ fontFamily: "'B612 Mono', monospace", color: "#5C5850" }}
+        >
+          Grab my resume — skills, experience, and projects in one click
         </p>
 
-        {/* Download Button */}
+        {/* Cockpit pushbutton download */}
         <a
           href={resumeFile}
           download="Lakshay_Resume.pdf"
-          className="bg-red-600 hover:bg-red-700 transition-all text-white font-bold py-3 px-6 rounded-lg flex items-center  gap-2 shadow-lg flex justify-center"
+          className="cp-btn inline-flex"
         >
-          <FaDownload /> Download Resume Now
+          <FaDownload className="text-[#C8201A]" />
+          Download Resume
+          <span className="ml-2 cp-light cp-light-green" />
         </a>
+
+        {/* Data strip below button */}
+        <div
+          className="mt-8 flex flex-wrap gap-6 p-4"
+          style={{
+            background: "#E4E0D8",
+            border: "1px solid #B8B4AC",
+            boxShadow: "inset 2px 2px 0 #F4F0E8, inset -1px -1px 0 #9A9690",
+          }}
+        >
+          {[
+            { label: "Format", value: "PDF" },
+            { label: "Pages", value: "01" },
+            { label: "Updated", value: "2026" },
+            { label: "Status", value: "AVAIL" },
+          ].map((d) => (
+            <div key={d.label}>
+              <p className="cp-data-label">{d.label}</p>
+              <p className="cp-data-value">{d.value}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
