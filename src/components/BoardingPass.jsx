@@ -83,14 +83,14 @@ const BoardingPass = () => {
           >
             Lakshay Setia
           </h2>
-          <p className="cp-section-label mb-4">Software Developer</p>
+          <p className="cp-section-label mb-4">SOFTWARE DEV ENGINEER</p>
 
           {/* Data grid */}
           <div className="grid grid-cols-2 gap-x-6 gap-y-4 mt-2">
             <DataField label="Origin" value="IXC" />
-            <DataField label="Destination" value="WORLDWIDE" />
-            <DataField label="Tech Stack" value="AI + MERN" />
-            <DataField label="Experience" value="2+ Yrs" />
+            <DataField label="Destination" value="UNIVERSE" />
+            <DataField label="Tech Stack" value="AI + Full Stack" />
+            <DataField label="Experience" value="2.5+ Yrs" />
           </div>
 
           {/* Divider */}
@@ -104,8 +104,10 @@ const BoardingPass = () => {
                 className="text-xs leading-relaxed"
                 style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-text)", letterSpacing: "0.05em" }}
               >
-                AGENTIC AI · TYPESCRIPT · JAVASCRIPT · REACT · NODE ·
-                PYTHON · MONGODB · SQL · C++ · HTML · CSS
+                 JAVA · TYPESCRIPT · PYTHON · REACT · 
+                 REACT NATIVE · NODE.JS · EXPRESS · 
+                 POSTGRESQL · MONGODB · SUPABASE · PGVECTOR ·
+                 TAILWIND · CI/CD · AWS · AGENTIC AI 
               </p>
             </div>
 

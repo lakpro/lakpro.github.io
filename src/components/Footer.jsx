@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaEnvelope, FaGoogle } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaGoogle } from "react-icons/fa";
 import { LuTowerControl } from "react-icons/lu";
 import { useDarkMode } from "../hooks/useDarkMode";
 
@@ -87,7 +87,7 @@ const Footer = () => {
             icon={<FaGoogle />}
             external
           />
-          <CommButton href="https://instagram.com/lakshay.setia" label="INSTA" icon={<FaInstagram />} external />
+          <CommButton href="https://github.com/lakpro" label="GITHUB" icon={<FaGithub />} external />
           <CommButton href={`mailto:${email}?subject=${subject}&body=${body}`} label="EMAIL" icon={<FaEnvelope />} />
         </div>
 

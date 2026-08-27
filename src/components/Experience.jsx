@@ -1,20 +1,33 @@
 import legistifyImg from "../assets/legistify.png";
 import prodNxImg from "../assets/prodnx.png";
 import eclipseImg from "../assets/eclipse360.png";
+import amazonImg from "../assets/amazon_logo.jpeg";
 
 export const experiences = [
   {
-    company: "Eclipse360",
-    role: "Fullstack Developer",
-    duration: "JUN'25 - PRESENT",
-    image: eclipseImg,
+    company: "Amazon",
+    role: "Software Dev Engineer",
+    duration: "JUN'26 - PRESENT",
+    image: amazonImg,
     status: "ACTIVE",
     statusColor: "#27A020",
     highlights: [
-      `Contributed to building a pixel-perfect <b>rooftop solar design</b> software.`,
-      "Led development of Design and Lead Management modules for the <b>solar CRM</b>.",
-      "Implemented critical features such as Auto-Save, Multiple Map Imagery, and Meter-to-Pixel integration.",
-      "Drove <b>end-to-end</b> delivery of the Project Management module, enhancing workflow efficiency.",
+      "Building resilient systems to help improve Amazon's delivery CX."
+    ],
+  },
+  {
+    company: "Eclipse360",
+    role: "Full Stack Developer",
+    duration: "JUN'25 - JUN'26",
+    image: eclipseImg,
+    status: "COMPLETE",
+    statusColor: "#C8201A",
+    highlights: [
+      "Built an <b>enterprise Solar CRM</b> (React, Node.js, PostgreSQL) serving <b>30+</b> orgs across 9+ modules.",
+      "Engineered a pixel-perfect rooftop <b>solar design canvas</b> (satellite imagery), cutting design time to <b>under 2 min</b>.",
+      "Automated the <b>PO & invoice flow</b>, slashing creation <b>from 1 hour to 1 min</b> with auto-generated receipts.",
+      "Drove <b>multi-region expansion</b> (AU → India,NZ) via reusable country/currency localization custom hooks.",
+      "Designed a configurable RBAC system managing 500+ users across 8+ org levels and 22+ granular permissions",
     ],
   },
   {
@@ -25,23 +38,23 @@ export const experiences = [
     status: "COMPLETE",
     statusColor: "#C8201A",
     highlights: [
-      "Developed a cross-browser <b>Chrome extension</b> application using React.",
-      "Reached <b>250+ WAU</b> (Weekly Active Users) and <b>677+ downloads</b>.",
-      "Built a precise <b>time-tracking</b> system, website blocker in JavaScript for detailed web activity reports.",
-      "Optimized data operations, implemented unit testing and added support for <b>20+ languages</b>.",
+      "Engineered a <b>React Chrome extension</b>, driving organic adoption to <b>250+ WAU</b> and <b>1.26k+ downloads</b>.",
+      "Architected <b>background scripts</b> and state synchronization for precision time-tracking and DOM blocking.",
+      "Optimized browser storage; implemented strict <b>unit testing</b> alongside i18n localization (<b>20+ languages</b>).",
+      "Awarded <b>Chrome Web Store Featured Badge</b> for best practices and API compliance.",
     ],
   },
   {
     company: "Legistify",
-    role: "Fullstack Intern",
+    role: "SDE Intern",
     duration: "JAN'24 - JUL'24",
     image: legistifyImg,
     status: "COMPLETE",
     statusColor: "#C8201A",
     highlights: [
-      "Led frontend component integration; developed 15+ backend APIs.",
-      "Fixed 9+ critical bugs, <b>improving system reliability by 30%</b>.",
-      "Integrated new editor for on-prem migration; <b>reduced hosting costs by 40%</b>.",
+      "Implemented a custom <b>on-premise editor migration</b>, reducing enterprise hosting costs by <b>40%</b>.",
+      "Developed <b>15+ scalable RESTful APIs</b> to seamlessly integrate external frontend architectures.",
+      "Resolved critical production bottlenecks, improving overall <b>system reliability by 30%</b>.",
     ],
   },
 ];
@@ -98,11 +111,34 @@ const Experience = () => {
             className="flex items-center justify-center p-6 md:w-[180px] flex-shrink-0"
             style={{ background: "var(--cp-panel-dark)", borderRight: "2px solid var(--cp-seam)" }}
           >
-            <img
-              src={exp.image}
-              alt={exp.company}
-              className="object-contain max-w-[230px] max-h-[280px]"
-            />
+            {exp.image ? (
+              <img
+                src={exp.image}
+                alt={exp.company}
+                className="object-contain max-w-[230px] max-h-[280px] rounded-md"
+              />
+            ) : (
+              <div
+                className="flex flex-col items-center justify-center w-full h-full min-h-[120px] px-3 text-center"
+                style={{
+                  border: "1px solid var(--cp-seam)",
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.08))",
+                }}
+              >
+                <span
+                  className="text-2xl font-bold tracking-[0.35em] uppercase"
+                  style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-text)" }}
+                >
+                  {exp.company}
+                </span>
+                <span
+                  className="mt-2 text-[10px] tracking-[0.3em] uppercase"
+                  style={{ fontFamily: "'B612 Mono', monospace", color: "var(--cp-muted)" }}
+                >
+                  {exp.role}
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Data content */}
